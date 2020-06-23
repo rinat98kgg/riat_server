@@ -7,6 +7,7 @@ import com.riatServer.ui.views.LocalDateTimeField;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.ComponentEvent;
 import com.vaadin.flow.component.ComponentEventListener;
+import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.checkbox.Checkbox;
@@ -15,11 +16,14 @@ import com.vaadin.flow.component.confirmdialog.ConfirmDialog;
 import com.vaadin.flow.component.formlayout.FormLayout;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.textfield.TextArea;
+import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.data.binder.BeanValidationBinder;
 import com.vaadin.flow.data.binder.Binder;
+import com.vaadin.flow.data.converter.StringToFloatConverter;
 import com.vaadin.flow.shared.Registration;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,7 +31,7 @@ public class TaskForm extends FormLayout {
     ComboBox<String>  name = new ComboBox<>("Название");
     TextArea description = new TextArea("Описание");
     Checkbox templateTask = new Checkbox("Шаблонная задача");
-//    TextField procent = new TextField("Выполнено (в %)");
+    //    TextField procent = new TextField("Выполнено (в %)");
     LocalDateTimeField termDate = new LocalDateTimeField("Срок");
     public LocalDateTimeField createDate = new LocalDateTimeField("Дата создания");
     public LocalDateTimeField updateDate = new LocalDateTimeField("Дата обновления");

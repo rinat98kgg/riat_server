@@ -1,9 +1,14 @@
 package com.riatServer.ui;
 
 import com.riatServer.config.SecurityUtils;
+import com.riatServer.domain.ListOfEmployees;
+import com.riatServer.domain.Task;
+import com.riatServer.domain.TaskStatus;
 import com.riatServer.domain.User;
 import com.riatServer.service.UserService;
+import com.riatServer.ui.views.list.PositionView;
 import com.riatServer.ui.views.list.*;
+import com.riatServer.ui.views.list.UserView;
 import com.riatServer.ui.views.report.PrintMyTasksView;
 import com.riatServer.ui.views.report.PrintTasksView;
 import com.vaadin.flow.component.applayout.AppLayout;
@@ -13,18 +18,22 @@ import com.vaadin.flow.component.contextmenu.SubMenu;
 import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.html.Anchor;
 import com.vaadin.flow.component.html.H1;
+import com.vaadin.flow.component.html.Hr;
 import com.vaadin.flow.component.icon.Icon;
 import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.menubar.MenuBar;
+import com.vaadin.flow.component.menubar.MenuBarVariant;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.tabs.Tab;
 import com.vaadin.flow.component.tabs.Tabs;
 import com.vaadin.flow.router.HighlightConditions;
+import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouterLink;
 import com.vaadin.flow.theme.Theme;
 import com.vaadin.flow.theme.lumo.Lumo;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 

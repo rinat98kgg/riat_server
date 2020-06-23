@@ -3,7 +3,6 @@ import com.riatServer.exception.ServiceException;
 
 import java.io.IOException;
 import java.util.List;
-
 /**
  *
  * @author Atai

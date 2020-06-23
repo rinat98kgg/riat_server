@@ -30,6 +30,7 @@ import com.vaadin.flow.router.Route;
 import org.springframework.security.access.annotation.Secured;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Stream;
@@ -98,8 +99,8 @@ public class TaskView extends VerticalLayout {
 
         save.addClickListener(event -> {
             if(user_id.getValue() == null) {
-                    user_id.setInvalid(true);
-                    user_id.setErrorMessage("Выберите сотрудника!");
+                user_id.setInvalid(true);
+                user_id.setErrorMessage("Выберите сотрудника!");
 
             }
             else {

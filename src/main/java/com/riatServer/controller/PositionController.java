@@ -1,7 +1,6 @@
 package com.riatServer.controller;
 
 import com.riatServer.domain.Position;
-import com.riatServer.repo.PositionsRepo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.BeanUtils;
@@ -9,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import com.riatServer.repo.PositionsRepo;
 
 import java.util.List;
 
@@ -36,7 +36,7 @@ public class PositionController {
 
     @ApiOperation(value = "Создание отдела")
     @PostMapping
-    public ResponseEntity<Position> create(@RequestBody Position position){
+    public ResponseEntity<Position> create(@RequestBody Position  position){
         if(position == null){
             return   new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }

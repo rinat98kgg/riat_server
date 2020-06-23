@@ -1,6 +1,8 @@
 package com.riatServer.repo;
 
 import com.riatServer.domain.ListOfEmployees;
+import com.riatServer.domain.Task;
+import com.riatServer.dto.TasksForReportDto;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -22,7 +24,7 @@ public interface ListOfEmployeesRepo extends JpaRepository<ListOfEmployees, Long
     @Query("select u from ListOfEmployees u where u.userId = ?1")
     List<ListOfEmployees> statistic(Long UserId);
 
-//    @Query("select l from ListOfEmployees l join User t on t.id = l.userId " +
+    //    @Query("select l from ListOfEmployees l join User t on t.id = l.userId " +
 //            "where lower(t.firstName) like lower(concat('%', :searchTerm, '%'))" +
 //            " or lower(t.lastName) like lower(concat('%', :searchTerm, '%'))" +
 //            " or lower(t.patronymic) like lower(concat('%', :searchTerm, '%'))" +

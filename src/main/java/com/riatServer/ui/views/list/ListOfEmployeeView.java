@@ -1,9 +1,6 @@
 package com.riatServer.ui.views.list;
 
-import com.riatServer.domain.ListOfEmployees;
-import com.riatServer.domain.Task;
-import com.riatServer.domain.TaskStatus;
-import com.riatServer.domain.User;
+import com.riatServer.domain.*;
 import com.riatServer.service.ListOfEmployeeService;
 import com.riatServer.service.TaskService;
 import com.riatServer.service.TaskStatusService;
@@ -14,6 +11,7 @@ import com.riatServer.ui.views.list.form.TaskForm;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.dialog.Dialog;
+import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.H4;
@@ -39,7 +37,7 @@ import java.util.stream.Stream;
 public class ListOfEmployeeView extends VerticalLayout {
     private final ListOfEmployeeService listOfEmployeeService;
     private final TaskService taskService;
-//    Grid<ListOfEmployees> grid = new Grid<>(ListOfEmployees.class);
+    //    Grid<ListOfEmployees> grid = new Grid<>(ListOfEmployees.class);
     TreeGrid<ListOfEmployees> grid = new TreeGrid<>(ListOfEmployees.class);
     TextField filterText = new TextField();
     H2 title = new H2("Задачи сотрудников");

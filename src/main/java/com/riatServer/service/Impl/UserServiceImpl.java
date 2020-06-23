@@ -5,14 +5,14 @@ import com.riatServer.domain.Role;
 import com.riatServer.domain.User;
 import com.riatServer.exception.ServiceException;
 import com.riatServer.repo.RolesRepo;
-import com.riatServer.repo.UsersRepo;
 import com.riatServer.service.EntityService;
-import com.riatServer.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+import com.riatServer.repo.UsersRepo;
+import com.riatServer.service.UserService;
 
 import java.io.IOException;
 import java.time.LocalDateTime;

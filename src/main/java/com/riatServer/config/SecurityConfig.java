@@ -3,7 +3,9 @@ package com.riatServer.config;
 import com.riatServer.security.jwt.JwtConfigurer;
 import com.riatServer.security.jwt.JwtTokenProvider;
 import com.riatServer.ui.views.login.LoginView;
+import com.vaadin.flow.spring.annotation.SpringComponent;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -12,6 +14,12 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.http.SessionCreationPolicy;
+
+import com.vaadin.flow.component.UI;
+import org.springframework.security.web.savedrequest.RequestCache;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 //@SpringComponent
 @EnableWebSecurity

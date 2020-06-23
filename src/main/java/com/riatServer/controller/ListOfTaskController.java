@@ -1,7 +1,7 @@
 package com.riatServer.controller;
 
 import com.riatServer.domain.ListOfTask;
-import com.riatServer.repo.ListOfTasksRepo;
+import com.riatServer.repo.TasksRepo;
 import com.riatServer.service.Impl.TaskServiceImpl;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import com.riatServer.repo.ListOfTasksRepo;
 
 import java.time.LocalDateTime;
 import java.util.List;

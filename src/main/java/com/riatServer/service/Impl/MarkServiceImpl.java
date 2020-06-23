@@ -1,6 +1,7 @@
 package com.riatServer.service.Impl;
 
 import com.riatServer.domain.Mark;
+import com.riatServer.domain.Mark;
 import com.riatServer.exception.ServiceException;
 import com.riatServer.repo.MarksRepo;
 import com.riatServer.service.EntityService;

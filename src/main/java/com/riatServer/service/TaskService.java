@@ -1,10 +1,8 @@
 package com.riatServer.service;
 
-import com.riatServer.domain.Department;
-import com.riatServer.domain.ListOfEmployees;
-import com.riatServer.domain.Task;
-import com.riatServer.domain.User;
+import com.riatServer.domain.*;
 import com.riatServer.dto.EmployeeTaskDto;
+import com.riatServer.dto.TasksForReportDto;
 
 import java.time.LocalDateTime;
 import java.util.List;

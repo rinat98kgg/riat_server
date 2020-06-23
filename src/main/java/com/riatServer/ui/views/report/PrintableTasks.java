@@ -4,6 +4,7 @@ import com.riatServer.domain.Task;
 import com.riatServer.service.TaskService;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.dependency.JavaScript;
 import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.H3;
@@ -11,7 +12,10 @@ import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.data.renderer.LocalDateTimeRenderer;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 
+import java.net.ContentHandler;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -23,7 +27,7 @@ public class PrintableTasks extends VerticalLayout {
     HorizontalLayout horizontalLayout = new HorizontalLayout();
     VerticalLayout verticalLayout = new VerticalLayout();
     public PrintableTasks(TaskService taskService, Long statusId, String status, LocalDateTime fromCreateDate, LocalDateTime toCreateDate,
-                         LocalDateTime fromTermDate, LocalDateTime toTermDate) {
+                          LocalDateTime fromTermDate, LocalDateTime toTermDate) {
         addClassName("list-view");
         setSizeFull();
 

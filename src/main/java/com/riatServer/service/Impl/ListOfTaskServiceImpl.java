@@ -1,6 +1,7 @@
 package com.riatServer.service.Impl;
 
 import com.riatServer.domain.ListOfTask;
+import com.riatServer.domain.ListOfTask;
 import com.riatServer.exception.ServiceException;
 import com.riatServer.repo.ListOfTasksRepo;
 import com.riatServer.service.EntityService;
@@ -16,7 +17,7 @@ import java.util.List;
 public class ListOfTaskServiceImpl implements ListOfTaskService, EntityService<ListOfTask, Long> {
     @Autowired
     ListOfTasksRepo listOfTaskRepo;
-    
+
 
     @Override
     public List<ListOfTask> getAll() {

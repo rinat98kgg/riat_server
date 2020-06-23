@@ -3,6 +3,7 @@ package com.riatServer.domain;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
@@ -52,7 +53,7 @@ public class User implements Serializable {
 
     private boolean isEnabled;
 
-    @Column(updatable = false, insertable = false, nullable = false, name = "fileName")
+    @Column(updatable = false, insertable = false, nullable = true, name = "fileName")
     private  String fileName;
 
     @ManyToOne

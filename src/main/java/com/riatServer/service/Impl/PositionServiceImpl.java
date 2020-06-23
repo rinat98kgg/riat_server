@@ -1,6 +1,7 @@
 package com.riatServer.service.Impl;
 
 import com.riatServer.domain.Position;
+import com.riatServer.domain.Position;
 import com.riatServer.exception.ServiceException;
 import com.riatServer.repo.PositionsRepo;
 import com.riatServer.service.EntityService;
@@ -22,7 +23,7 @@ public class PositionServiceImpl implements PositionService, EntityService<Posit
 //        this.positionRepo = positionRepo;
 //    }
 
-    
+
     @Override
     public List<Position> getAll() {
         return  positionRepo.findAll();

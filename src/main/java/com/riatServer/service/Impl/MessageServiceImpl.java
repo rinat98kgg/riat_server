@@ -1,12 +1,16 @@
 package com.riatServer.service.Impl;
 
+import com.riatServer.domain.Mark;
 import com.riatServer.domain.Message;
+import com.riatServer.exception.ServiceException;
 import com.riatServer.repo.MessagesRepo;
 import com.riatServer.repo.UsersRepo;
+import com.riatServer.service.EntityService;
 import com.riatServer.service.MessageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;

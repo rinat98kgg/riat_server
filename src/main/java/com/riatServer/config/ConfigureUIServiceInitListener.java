@@ -4,6 +4,7 @@ import com.riatServer.ui.views.AccessDeniedView;
 import com.riatServer.ui.views.login.LoginView;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.router.BeforeEnterEvent;
+import com.vaadin.flow.router.NotFoundException;
 import com.vaadin.flow.server.ServiceInitEvent;
 import com.vaadin.flow.server.VaadinServiceInitListener;
 import org.springframework.stereotype.Component;

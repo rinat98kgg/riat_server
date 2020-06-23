@@ -2,8 +2,8 @@ package com.riatServer.security.rest;
 
 import com.riatServer.domain.User;
 import com.riatServer.dto.AdminUserDto;
-import com.riatServer.service.Impl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import com.riatServer.service.Impl.UserServiceImpl;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

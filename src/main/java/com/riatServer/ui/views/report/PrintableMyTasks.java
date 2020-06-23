@@ -1,7 +1,9 @@
 package com.riatServer.ui.views.report;
 
 import com.riatServer.domain.ListOfEmployees;
+import com.riatServer.domain.Task;
 import com.riatServer.service.ListOfEmployeeService;
+import com.riatServer.service.TaskService;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.grid.Grid;

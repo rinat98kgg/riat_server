@@ -36,7 +36,7 @@ public class TaskStatusController {
 
     @ApiOperation(value = "Создание отдела")
     @PostMapping
-    public ResponseEntity<TaskStatus> create(@RequestBody TaskStatus taskStatus){
+    public ResponseEntity<TaskStatus> create(@RequestBody TaskStatus  taskStatus){
         if(taskStatus == null){
             return   new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }

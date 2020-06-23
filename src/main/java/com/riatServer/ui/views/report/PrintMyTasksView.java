@@ -1,8 +1,10 @@
 package com.riatServer.ui.views.report;
 
 import com.riatServer.domain.ListOfEmployees;
+import com.riatServer.domain.Task;
 import com.riatServer.domain.TaskStatus;
 import com.riatServer.service.ListOfEmployeeService;
+import com.riatServer.service.TaskService;
 import com.riatServer.service.TaskStatusService;
 import com.riatServer.ui.MainLayout;
 import com.riatServer.ui.views.LocalDateTimeField;

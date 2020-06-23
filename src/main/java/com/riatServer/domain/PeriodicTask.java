@@ -27,14 +27,14 @@ public class PeriodicTask implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "Task_id")
-    private com.riatServer.domain.Task Task;
+    private Task Task;
 
     @Column(updatable = false, insertable = false, nullable = false, name = "Mark_id")
     private  long MarkId;
 
     @ManyToOne
     @JoinColumn(name = "Mark_id")
-    private com.riatServer.domain.Mark Mark;
+    private Mark Mark;
 
     @Column(updatable = false, nullable = false, name="create_date")
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")

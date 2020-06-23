@@ -37,6 +37,11 @@ public class CustomRequestCache extends HttpSessionRequestCache {
 
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         User user = usersRepo.findByName(authentication.getName());
+        authentication.getAuthorities().forEach(o -> {
+            System.out.println(o.getClass().getName());
+            System.out.println(o.getAuthority());
+            System.out.println(o.toString());
+        });
         if(user.getPosition_id().getName().equals("Директор") || user.getPosition_id().getName().equals("Управляющий")){
             return "users";
         }

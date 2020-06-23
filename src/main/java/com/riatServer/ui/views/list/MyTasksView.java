@@ -1,9 +1,6 @@
 package com.riatServer.ui.views.list;
 
-import com.riatServer.domain.ListOfEmployees;
-import com.riatServer.domain.Task;
-import com.riatServer.domain.TaskStatus;
-import com.riatServer.domain.User;
+import com.riatServer.domain.*;
 import com.riatServer.service.ListOfEmployeeService;
 import com.riatServer.service.TaskService;
 import com.riatServer.service.TaskStatusService;
@@ -268,9 +265,9 @@ public class MyTasksView extends VerticalLayout {
         show.addClickListener(event -> updateWithFilters(statusComboBox.getValue()));
 
         clear.addClickListener(event -> {
-           filterText.clear();
-           statusComboBox.clear();
-           updateList();
+            filterText.clear();
+            statusComboBox.clear();
+            updateList();
         });
 
         HorizontalLayout toolbar = new HorizontalLayout(filterText, statusComboBox, show, clear);

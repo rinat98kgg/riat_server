@@ -1,7 +1,6 @@
 package com.riatServer.controller;
 
 import com.riatServer.domain.Mark;
-import com.riatServer.repo.MarksRepo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.BeanUtils;
@@ -9,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import com.riatServer.repo.MarksRepo;
 
 import java.util.List;
 

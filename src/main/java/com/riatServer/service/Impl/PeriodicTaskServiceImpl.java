@@ -1,6 +1,7 @@
 package com.riatServer.service.Impl;
 
 import com.riatServer.domain.PeriodicTask;
+import com.riatServer.domain.PeriodicTask;
 import com.riatServer.exception.ServiceException;
 import com.riatServer.repo.PeriodicTasksRepo;
 import com.riatServer.service.EntityService;

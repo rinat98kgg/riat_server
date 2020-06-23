@@ -7,6 +7,7 @@ import com.vaadin.flow.component.timepicker.TimePicker;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.Locale;
 import java.util.Objects;
 
 public class LocalDateTimeField extends CustomField<LocalDateTime> {

@@ -19,7 +19,6 @@ import com.vaadin.flow.data.renderer.LocalDateTimeRenderer;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import org.springframework.security.access.annotation.Secured;
-
 import java.time.LocalDateTime;
 import java.util.List;
 
